@@ -6,137 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="19dp"
-            android:text="Rec App"
-            tools:layout_editor_absoluteX="163dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="74dp"
-            android:layout_height="42dp"
-            android:text="Sad"
-            tools:layout_editor_absoluteX="74dp"
-            tools:layout_editor_absoluteY="76dp" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="228dp"
-            android:layout_height="44dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="How are you feeling today?"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="233dp" />
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="356dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Is there a particular artist you want to listen to?"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="136dp" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="74dp"
-            android:layout_height="42dp"
-            android:text="Happy"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="76dp" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="74dp"
-            android:layout_height="42dp"
-            android:text="Angry"
-            tools:layout_editor_absoluteX="234dp"
-            tools:layout_editor_absoluteY="76dp" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="84dp"
-            android:layout_height="43dp"
-            android:text="Anxious"
-            tools:layout_editor_absoluteX="150dp"
-            tools:layout_editor_absoluteY="76dp" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="74dp"
-            android:layout_height="42dp"
-            android:text="Mello"
-            tools:layout_editor_absoluteX="308dp"
-            tools:layout_editor_absoluteY="76dp" />
-
-        nbnb
-
-    </android.support.constraint.ConstraintLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:text="Rec App"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="74dp"
-        android:layout_height="42dp"
-        android:text="Sad"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="76dp" />
-
     <EditText
         android:id="@+id/editText"
-        android:layout_width="228dp"
-        android:layout_height="43dp"
+        android:layout_width="386dp"
+        android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="How are you feeling today?"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="33dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="74dp"
-        android:layout_height="42dp"
-        android:text="Happy"
+        android:text="How are you feeling right now?"
+        tools:layout_constraintTop_creator="FirstQuestion"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="76dp" />
+        tools:layout_editor_absoluteY="31dp" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="74dp"
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="381dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Describe what your going through right now?"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="204dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="381dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="What recommendations would you like?"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="366dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="383dp"
+        android:layout_height="127dp"
+        tools:layout_constraintTop_toBottomOf="@+id/editText"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="77dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="383dp"
+        android:layout_height="99dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="260dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
+    </android.support.design.widget.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="77dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="111dp"
         android:layout_height="42dp"
-        android:text="Angry"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="76dp" />
+        android:text="Books"
+        tools:layout_editor_absoluteX="257dp"
+        tools:layout_editor_absoluteY="412dp" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="84dp"
-        android:layout_height="43dp"
-        android:text="Anxious"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="76dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="74dp"
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="111dp"
         android:layout_height="42dp"
-        android:text="Mello"
-        tools:layout_editor_absoluteX="308dp"
-        tools:layout_editor_absoluteY="76dp" />
+        android:text="Movies"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="412dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="111dp"
+        android:layout_height="42dp"
+        android:text="Songs"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="412dp" />
 
 </android.support.constraint.ConstraintLayout>
