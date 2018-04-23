@@ -6,13 +6,137 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="Rec App"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="74dp"
+            android:layout_height="42dp"
+            android:text="Sad"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="228dp"
+            android:layout_height="44dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="How are you feeling today?"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="233dp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="356dp"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Is there a particular artist you want to listen to?"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="74dp"
+            android:layout_height="42dp"
+            android:text="Happy"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="74dp"
+            android:layout_height="42dp"
+            android:text="Angry"
+            tools:layout_editor_absoluteX="234dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="84dp"
+            android:layout_height="43dp"
+            android:text="Anxious"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="74dp"
+            android:layout_height="42dp"
+            android:text="Mello"
+            tools:layout_editor_absoluteX="308dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        nbnb
+
+    </android.support.constraint.ConstraintLayout>
+
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="19dp"
+        android:text="Rec App"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:text="Sad"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="228dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="How are you feeling today?"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:text="Happy"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:text="Angry"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="84dp"
+        android:layout_height="43dp"
+        android:text="Anxious"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:text="Mello"
+        tools:layout_editor_absoluteX="308dp"
+        tools:layout_editor_absoluteY="76dp" />
 
 </android.support.constraint.ConstraintLayout>
