@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Recommendation Application</string>
     <string name="question1">How are you feeling today?</string>
-    <string name="question2">Describe what your going through right now?</string>
+    <string name="question2">Describe what you are going through right now?</string>
     <string name="question3">What recommendations would you like?</string>
     <string name="hint1">Template: I am feeling " "</string>
     <string name="hint2">Template: I am going experiencing " "</string>
