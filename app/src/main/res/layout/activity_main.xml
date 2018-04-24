@@ -4,102 +4,150 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="386dp"
-        android:layout_height="0dp"
+        android:id="@+id/Question1"
+        android:layout_width="362dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="How are you feeling right now?"
-        tools:layout_constraintTop_creator="FirstQuestion"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="31dp" />
+        android:text= "@string/question1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintTop_creator="FirstQuestion" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="381dp"
-        android:layout_height="56dp"
+        android:id="@+id/Question2"
+        android:layout_width="361dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Describe what your going through right now?"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="204dp" />
+        android:text="@string/question2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="381dp"
+        android:id="@+id/Question3"
+        android:layout_width="361dp"
         android:layout_height="46dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="What recommendations would you like?"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="366dp" />
+        android:text="@string/question3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="383dp"
-        android:layout_height="127dp"
-        tools:layout_constraintTop_toBottomOf="@+id/editText"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="77dp">
+        android:id="@+id/textInputLayout"
+        android:layout_width="361dp"
+        android:layout_height="116dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question1"
+        tools:layout_constraintTop_toBottomOf="@+id/editText">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="77dp" />
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/TextBox1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="hint" />
+            android:hint='@string/hint1' />
+
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="383dp"
+        android:id="@+id/textInputLayout2"
+        android:layout_width="362dp"
         android:layout_height="99dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="260dp">
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question2">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint='@string/hint2' />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="hint" />
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="167dp"
+            tools:layout_editor_absoluteY="261dp" />
     </android.support.design.widget.TextInputLayout>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="77dp" />
-
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="261dp" />
 
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="111dp"
         android:layout_height="42dp"
-        android:text="Books"
-        tools:layout_editor_absoluteX="257dp"
-        tools:layout_editor_absoluteY="412dp" />
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/books"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question3" />
 
     <CheckBox
         android:id="@+id/checkBox6"
         android:layout_width="111dp"
         android:layout_height="42dp"
-        android:text="Movies"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="412dp" />
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/movies"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/Question3" />
 
     <CheckBox
         android:id="@+id/checkBox5"
         android:layout_width="111dp"
         android:layout_height="42dp"
-        android:text="Songs"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="412dp" />
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/songs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question3" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
 </android.support.constraint.ConstraintLayout>
