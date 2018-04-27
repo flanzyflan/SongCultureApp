@@ -12,10 +12,10 @@
     <TextView
         android:id="@+id/Question1"
         android:layout_width="361dp"
-        android:layout_height="29dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:text="@string/question1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -28,10 +28,10 @@
     <TextView
         android:id="@+id/Question2"
         android:layout_width="361dp"
-        android:layout_height="51dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:text="@string/question2"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -42,27 +42,26 @@
 
     <TextView
         android:id="@+id/Question3"
-        android:layout_width="361dp"
+        android:layout_width="359dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:text="@string/question3"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="361dp"
-        android:layout_height="94dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="1dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Question1"
@@ -80,10 +79,10 @@
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout2"
         android:layout_width="361dp"
-        android:layout_height="94dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="1dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Question2">
@@ -98,42 +97,103 @@
 
     <CheckBox
         android:id="@+id/checkBox4"
-        android:layout_width="111dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/books"
-        app:layout_constraintBottom_toTopOf="@+id/ScrollResult"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Question3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="111dp"
-        android:layout_height="42dp"
+        android:layout_width="91dp"
+        android:layout_height="26dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/movies"
+        android:text="@string/Com"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question3" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="91dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Romance"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/checkBox4"
         app:layout_constraintTop_toBottomOf="@+id/Question3" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="103dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="15dp"
+        android:id="@+id/checkBox6"
+        android:layout_width="76dp"
+        android:layout_height="26dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
-        android:text="@string/songs"
-        app:layout_constraintBottom_toTopOf="@+id/ScrollResult"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox6"
-        app:layout_constraintHorizontal_bias="0.25"
+        android:text="@string/Action"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/Question3" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="93dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="220dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Adventure"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox7"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="89dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="220dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Animation"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox10"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox10"
+        android:layout_width="81dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="220dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Thrill"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+    <CheckBox
+        android:id="@+id/checkBox8"
+        android:layout_width="81dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="220dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Drama"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Question3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="81dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Scary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question3" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -143,24 +203,26 @@
         app:layout_constraintGuide_begin="20dp" />
 
     <ScrollView
-        android:id="@+id/ScrollResult"
-        android:layout_width="354dp"
-        android:layout_height="90dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="368dp"
+        android:layout_height="176dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox6">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/JsonResult"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="402dp" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/JsonResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

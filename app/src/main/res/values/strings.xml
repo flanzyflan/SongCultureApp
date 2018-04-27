@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">Recommendation Application</string>
     <string name="question1">How are you feeling today?</string>
-    <string name="question2">Describe what you are going through right now?</string>
-    <string name="question3">What recommendations would you like?</string>
+    <string name="question2">How far back (release year) would you like to watch </string>
+    <string name="question3">What genres do you like?</string>
     <string name="hint1">Template: I am feeling " "</string>
-    <string name="hint2">Template: I am going experiencing " "</string>
-    <string name="songs">Songs</string>
-    <string name="movies">Movies</string>
-    <string name="books">Books</string>
+    <string name="hint2">Template: 2001 </string>
+    <string name="Romance">Romance</string>
+    <string name="Action">Action</string>
+    <string name="Scary">Horror</string>
+    <string name="Com">Comedy </string>
+    <string name="Drama">Drama </string>
+    <string name="Animation">Animation </string>
+    <string name="Adventure">Adventure </string>
+    <string name="Thrill">Thriller </string>
 </resources>
