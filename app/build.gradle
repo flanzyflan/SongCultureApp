@@ -17,6 +17,10 @@ android {
         }
     }
 }
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -27,4 +31,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support:design:27.1.1'
+    implementation 'com.github.kaaes:spotify-web-api-android:0.4.1'
 }
