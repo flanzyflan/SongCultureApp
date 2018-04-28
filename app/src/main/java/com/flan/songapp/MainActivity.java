@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
-                    "https://api.themoviedb.org/3/movie/550?api_key="
+                    "https://api.themoviedb.org/3/search/movie?api_key="
                             + "bbec13ad5f0b916db99eef893310f76c",
                     null,
                     new Response.Listener<JSONObject>() {
