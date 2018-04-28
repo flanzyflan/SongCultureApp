@@ -2,9 +2,13 @@ package com.flan.songapp;
 
 
 import android.app.DownloadManager;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -23,14 +27,24 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "SongApp:Main";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         // Set up the queue for our API requests
         requestQueue = Volley.newRequestQueue(this);
         setContentView(R.layout.activity_main);
         startAPICall();
+
+        final Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+            }
+        });
     }
     void startAPICall() {
         try {
