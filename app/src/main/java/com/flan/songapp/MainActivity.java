@@ -16,6 +16,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
                     "https://api.themoviedb.org/3/search/movie?api_key="
-                            + "bbec13ad5f0b916db99eef893310f76c",
+                            + "bbec13ad5f0b916db99eef893310f76c" + "&language=en-US&query=" + "" + "&page=1&include_adult=false",
                     null,
                     new Response.Listener<JSONObject>() {
                         @Override
@@ -71,6 +74,27 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
+    public static String getDetails(final String json) {
+        if (json == null) {
+            return "Nothing To Show";
+        }
+        JsonParser parser = new JsonParser();
+        JsonObject result = parser.parse(json).getAsJsonObject();
+        if (result == null) {
+            return "Nothing To Show";
+        }
+        int totalResults = result.get("total_results").getAsInt();
+        if (totalResults == 0) {
+            return "No such movie exists. Try fixing any typos or searching for a different movie.";
+        }
+        JsonArray results = result.get("results").getAsJsonArray();
+        JsonObject details = results.get(0).getAsJsonObject();
+        String voteAverage = details.get("vote_average").getAsString();
+        String title = details.get("title").getAsString();
+        String overview = details.get("overview").getAsString();
+        String releaseDate = details.get("release_date").getAsString();
+        return "Title: " + title + "/n" + "Description: " + overview + "/n" + "Rating: " + voteAverage+ "/n" + "Release Date: " + releaseDate;
+    }
 }
+
 
