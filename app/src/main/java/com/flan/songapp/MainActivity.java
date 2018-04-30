@@ -2,6 +2,7 @@ package com.flan.songapp;
 
 
 import android.app.DownloadManager;
+import android.content.Context;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -41,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         // Set up the queue for our API requests
         requestQueue = Volley.newRequestQueue(this);
         setContentView(R.layout.activity_main);
-        startAPICall();
 
         final Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 final EditText edit = findViewById(R.id.TextBox1);
                 String search = edit.getText().toString();
                 startAPICall(search);
+                TextView answer = findViewById(R.id.JsonResult);
+                answer.setText();
+
+
             }
         });
     }
