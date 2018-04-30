@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        startAPICall("");
 
 
         // Set up the queue for our API requests
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         String title = details.get("title").getAsString();
         String overview = details.get("overview").getAsString();
         String releaseDate = details.get("release_date").getAsString();
-        return "Title: " + title + "/n" + "Description: " + overview + "/n" + "Rating: " + voteAverage+ "/n" + "Release Date: " + releaseDate;
+        return "Title: " + title + "\n\n" + "Description: " + overview + "\n\n" + "Rating: " + voteAverage + "/10" + "\n\n" + "Release Date: " + releaseDate;
     }
 }
 
