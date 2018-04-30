@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 search = search.replace(" ", "%20");
                 startAPICall(search);
                 TextView answer = findViewById(R.id.JsonResult);
+                //Find where json response is and put it in argument for getDetails. Thx
                 answer.setText(getDetails());
             }
         });
