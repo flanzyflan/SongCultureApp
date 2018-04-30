@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private static RequestQueue requestQueue;
 
     private static final String TAG = "SongApp:Main";
+    private String json;
 
 
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 startAPICall(search);
                 TextView answer = findViewById(R.id.JsonResult);
                 //Find where json response is and put it in argument for getDetails. Thx
-                answer.setText(getDetails());
+                answer.setText(getDetails(json));
             }
         });
     }
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onResponse(final JSONObject response) {
                             try {
                                 Log.d(TAG, response.toString(2));
+                                json = response.toString();
                             } catch (JSONException ignored) { }
                         }
                     }, new Response.ErrorListener() {
@@ -83,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
     public static String getDetails(final String json) {
         if (json == null) {
