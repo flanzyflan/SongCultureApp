@@ -51,11 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 // Code here executes on main thread after user presses button
                 final EditText edit = findViewById(R.id.TextBox1);
                 String search = edit.getText().toString();
+                search = search.replace(" ", "%20");
                 startAPICall(search);
                 TextView answer = findViewById(R.id.JsonResult);
-                answer.setText();
-
-
+                answer.setText(getDetails());
             }
         });
     }
