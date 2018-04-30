@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tem1"
+    android:background="@drawable/temp2"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp"
     android:isScrollContainer="false"
@@ -17,7 +17,7 @@
         android:layout_height="27dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
         android:ems="10"
         android:text="@string/question1"
@@ -34,8 +34,8 @@
         android:layout_width="345dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,14 +74,16 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="348dp"
-        android:layout_height="286dp"
+        android:layout_height="322dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="40dp"
         android:isScrollContainer="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button">
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.6">
 
 
         <LinearLayout
