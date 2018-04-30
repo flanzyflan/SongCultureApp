@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startAPICall("");
 
 
         // Set up the queue for our API requests
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    public static String getDetails(final String json) {
+    public String getDetails(final String json) {
         if (json == null) {
             return "";
         }
@@ -107,7 +106,22 @@ public class MainActivity extends AppCompatActivity {
         String title = details.get("title").getAsString();
         String overview = details.get("overview").getAsString();
         String releaseDate = details.get("release_date").getAsString();
-        return "Title: " + title + "\n\n" + "Description: " + overview + "\n\n" + "Rating: " + voteAverage + "/10" + "\n\n" + "Release Date: " + releaseDate;
+        String Genre = "";
+        JsonArray genres= details.get("genre_ids").getAsJsonArray();
+        for (int i = 0; i < genres.size(); i++) {
+            Genre = Genre + getGenre(genres.get(i).getAsInt()) + "\n";
+        }
+        return "Title: " + title + "\n\n" + "Description: " + overview + "\n\n" + "Genres: \n" + Genre + "\n" + "Rating: " + voteAverage + "/10" + "\n\n" + "Release Date: " + releaseDate;
+    }
+    public String getGenre(final int x) {
+        int[] number = new int[]{28, 12, 16, 35, 80, 99, 18, 10751, 14, 36, 27, 10402, 9648, 10749, 878, 10770, 53, 10752, 37};
+        String[] genre = new String[]{"Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "History", "Horror", "Music", "Mystery", "Romance", "Science Fiction", "TV Movie", "Thriller", "War", "Western"};
+        for (int i = 0; i < number.length; i++) {
+            if (number[i] == x) {
+                return genre[i];
+            }
+        }
+        return "";
     }
 }
 
