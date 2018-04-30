@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.android.volley.Request;
@@ -46,15 +47,18 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
+                final EditText edit = findViewById(R.id.TextBox1);
+                String search = edit.getText().toString();
+                startAPICall(search);
             }
         });
     }
-    void startAPICall() {
+    void startAPICall(String search) {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
                     "https://api.themoviedb.org/3/search/movie?api_key="
-                            + "bbec13ad5f0b916db99eef893310f76c" + "&language=en-US&query=" + "" + "&page=1&include_adult=false",
+                            + "bbec13ad5f0b916db99eef893310f76c" + "&language=en-US&query=" + search + "&page=1&include_adult=false",
                     null,
                     new Response.Listener<JSONObject>() {
                         @Override
