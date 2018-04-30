@@ -90,12 +90,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public static String getDetails(final String json) {
         if (json == null) {
-            return "Nothing To Show";
+            return "";
         }
         JsonParser parser = new JsonParser();
         JsonObject result = parser.parse(json).getAsJsonObject();
         if (result == null) {
-            return "Nothing To Show";
+            return "";
         }
         int totalResults = result.get("total_results").getAsInt();
         if (totalResults == 0) {
