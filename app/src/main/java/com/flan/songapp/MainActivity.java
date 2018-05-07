@@ -46,15 +46,14 @@ public class MainActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
         setContentView(R.layout.activity_main);
 
-        final EditText edit = findViewById(R.id.TextBox1);
-        String search = edit.getText().toString();
-        search = search.replace(" ", "%20");
+        
         final Button button = findViewById(R.id.button);
-
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-
+                final EditText edit = findViewById(R.id.TextBox1);
+                String search = edit.getText().toString();
+                search = search.replace(" ", "%20");
                 startAPICall(search);
                 TextView answer = findViewById(R.id.JsonResult);
                 //Find where json response is and put it in argument for getDetails. Thx
